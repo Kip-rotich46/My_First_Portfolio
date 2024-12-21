@@ -1,0 +1,49 @@
+/* styles.css */
+/* Flexbox layout setup */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex: auto;
+  flex-direction: row;
+}
+
+/* Flex properties for article and aside */
+article {
+  flex: 2;
+  overflow-y: auto;
+}
+
+aside {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* Logo styling for header */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+/* Styling for responsiveness */
+.works_on_smartphone {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  article,
+  aside {
+    flex: none;
+    width: 100%;
+  }
+}
